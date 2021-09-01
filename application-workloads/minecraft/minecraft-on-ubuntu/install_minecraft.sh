@@ -72,6 +72,7 @@ chown $minecraft_user:$minecraft_group $minecraft_server_path/ops.json
 touch $minecraft_server_path/server.properties
 chown $minecraft_user:$minecraft_group $minecraft_server_path/server.properties
 # echo 'max-tick-time=-1' >> $minecraft_server_path/server.properties
+printf 'online-mode=false\n' >> $minecraft_server_path/server.properties
 printf 'difficulty=%s\n' $2 >> $minecraft_server_path/server.properties
 printf 'level-name=%s\n' $3 >> $minecraft_server_path/server.properties
 printf 'gamemode=%s\n' $4 >> $minecraft_server_path/server.properties
